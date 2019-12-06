@@ -1,22 +1,22 @@
-n = (int) (input())
+n = (int)(input())
 
 def is_prime(num):
-    factor = 2
-    while (factor < num):
+    factor = 3
+    while (factor <= num**0.5):
         if num%factor == 0:
              return False
-        factor +=1
+        factor +=2
     return True
 
 if n==1:
     print (2)
 count = 1
 num = 3
-while(count <= n):
+while(True):
     if is_prime(num):
         count +=1
         if count == n:
-            print(num)
+            print('The prime number is:',num)
             break
     num +=2 
     
